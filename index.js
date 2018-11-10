@@ -1,7 +1,7 @@
 const winston = require('winston')
 const path = require('path')
 
-module.exports = function ({ environment }) {
+module.exports = function ({ environment = 'development' }) {
   if (environment === 'test') {
     return winston.createLogger({
       transports: [
